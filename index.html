@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BKE KIBALI CONNECT SARL</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI}
+body{color:#222}
+
+/* NAVBAR */
+header{
+position:fixed;top:0;width:100%;
+background:#0b2c4d;
+transition:.4s;z-index:1000
+}
+header.scrolled{background:#081f36}
+nav{
+display:flex;justify-content:space-between;
+align-items:center;padding:15px 10%
+}
+nav h2{color:#fff;animation:logo 1.2s}
+nav a{
+color:#fff;margin-left:20px;
+text-decoration:none;position:relative
+}
+nav a::after{
+content:"";position:absolute;
+bottom:-5px;left:0;width:0;height:2px;
+background:#f4b400;transition:.3s
+}
+nav a:hover::after{width:100%}
+
+@keyframes logo{
+from{opacity:0;transform:scale(.8)}
+to{opacity:1}
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url("https://images.unsplash.com/photo-1503387762-592deb58ef4e");
+background-size:cover;
+display:flex;align-items:center;
+color:#fff;text-align:center
+}
+.hero h1{font-size:48px}
+.hero p{max-width:700px;margin:20px auto}
+.btn{
+display:inline-block;padding:14px 35px;
+background:#f4b400;color:#000;
+text-decoration:none;font-weight:bold
+}
+
+/* ANIMATION */
+.fade{opacity:0;transform:translateY(40px);transition:1s}
+.fade.show{opacity:1;transform:none}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;bottom:20px;right:20px;
+background:#25D366;color:#fff;
+padding:15px;border-radius:50%;
+font-size:22px;text-decoration:none
+}
+</style>
+</head>
+
+<body>
+
+<header id="navbar">
+<nav>
+<h2>BKE KIBALI CONNECT SARL</h2>
+<div>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="projects.html">Projects</a>
+<a href="contact.html">Contact</a>
+</div>
+</nav>
+</header>
+
+<section class="hero">
+<div style="margin:auto">
+<h1>Building Infrastructure, Connecting Industries</h1>
+<p class="fade">
+Engineering, construction, mining support, logistics and trade solutions.
+</p>
+<a href="contact.html" class="btn">Request a Quote</a>
+</div>
+</section>
+
+<a class="whatsapp" href="https://wa.me/243822580382">💬</a>
+
+<script>
+window.addEventListener("scroll",()=>{
+navbar.classList.toggle("scrolled",window.scrollY>50);
+});
+const f=document.querySelector(".fade");
+new IntersectionObserver(e=>{
+if(e[0].isIntersecting)f.classList.add("show");
+}).observe(f);
+</script>
+
+</body>
+</html>

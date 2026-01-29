@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Projects | BKE KIBALI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI}
+section{padding:120px 10%}
+
+header{position:fixed;width:100%;top:0;background:#0b2c4d}
+nav{display:flex;justify-content:space-between;align-items:center;padding:15px 10%}
+nav h2,nav a{color:#fff;text-decoration:none;margin-left:20px}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px
+}
+.card{
+border-radius:6px;overflow:hidden;
+box-shadow:0 4px 12px rgba(0,0,0,.15)
+}
+.card img{width:100%;display:block}
+.card p{padding:15px;background:#fff}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<h2>BKE KIBALI</h2>
+<div>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="projects.html">Projects</a>
+<a href="contact.html">Contact</a>
+</div>
+</nav>
+</header>
+
+<section>
+<h1>Our Projects</h1>
+
+<div class="gallery">
+<div class="card">
+<img src="https://picsum.photos/400/300">
+<p>Road Construction – Haut-Uélé</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/401/300">
+<p>Mining Logistics Support</p>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/402/300">
+<p>Water Drilling Project</p>
+</div>
+</div>
+</section>
+
+</body>
+</html>
